@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Projects — Muskan Ahmed</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+        .project-card {
+            padding: 32px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            transition: 0.3s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255,255,255,0.18);
+        }
+        .project-card-top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        .project-card-top i {
+            font-size: 18px;
+            color: rgba(255,255,255,0.35);
+        }
+        .project-links {
+            display: flex;
+            gap: 10px;
+        }
+        .project-links a {
+            font-size: 13px;
+            color: rgba(255,255,255,0.3);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .project-links a:hover { color: #fff; }
+        .project-card h3 {
+            font-size: 15px;
+            font-weight: 600;
+            color: #fff;
+        }
+        .project-card p {
+            font-size: 13px;
+            color: var(--subtext);
+            line-height: 1.7;
+            flex: 1;
+        }
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .tech-tag {
+            font-size: 10px;
+            padding: 3px 9px;
+            border: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.35);
+            letter-spacing: 0.04em;
+        }
+        @media (max-width: 768px) {
+            .projects-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="contact-item">
+            <div class="icon-circle">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <span style="color: rgba(156,163,175);">muskanas786@gmail.com</span>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="goals.html">Goals</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="section">
+        <h2 style="margin-bottom: 48px;">
+            <span class="first-line">Things I've built —</span>
+            <span class="second-line">research, systems, and tools.</span>
+        </h2>
+
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <div class="project-card-top">
+                    <i class="fa-solid fa-robot"></i>
+                    <div class="project-links">
+                        <a href="https://github.com/muskanas78/AI" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <h3>Multi-Agent AI Assistant</h3>
+                <p>Autonomous multi-agent framework combining a transformer-based chatbot (Gemini API) with CrewAI agents (Researcher, Writer, Editor). Implements similarity-based context retrieval, dynamic prompt routing, and task coordination — achieving 97% autonomous task success rate.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">CrewAI</span>
+                    <span class="tech-tag">Gemini API</span>
+                    <span class="tech-tag">Transformers</span>
+                    <span class="tech-tag">Streamlit</span>
+                    <span class="tech-tag">Ollama</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-card-top">
+                    <i class="fa-solid fa-server"></i>
+                    <div class="project-links">
+                        <a href="https://github.com/muskanas78/hrms-eis-api" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <h3>Microservices-Based HRMS EIS</h3>
+                <p>Enterprise-grade Human Resource Management System built in collaboration with Easypaisa. 30+ RESTful microservices covering recruitment, payroll, performance management, and compliance. Deployed on AWS EC2 with GitHub Actions CI/CD and JWT-based authentication.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Spring Boot</span>
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">AWS EC2</span>
+                    <span class="tech-tag">REST APIs</span>
+                    <span class="tech-tag">JWT</span>
+                    <span class="tech-tag">GitHub Actions</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-card-top">
+                    <i class="fa-solid fa-newspaper"></i>
+                    <div class="project-links">
+                        <a href="https://github.com/muskanas78/NAaaS" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <h3>NAaaS — News Analytics as a Service</h3>
+                <p>Pakistan's first AI-powered news analytics platform with geo-temporal filters, sentiment analysis, aspect-based insights, and an AI chatbot. Built during internship at PCN Lab. Features source-based filtering, regional dashboards, and AI-powered summaries.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">React.js</span>
+                    <span class="tech-tag">Figma</span>
+                    <span class="tech-tag">NLP</span>
+                    <span class="tech-tag">Sentiment Analysis</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-card-top">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <div class="project-links">
+                        <a href="https://github.com/muskanas78/Stock-Price-Predictor" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <h3>Stock Price Predictor</h3>
+                <p>AI-powered stock analysis platform with real-time data, technical indicators, ML price predictions (Linear Regression & Random Forest), and an intelligent chatbot assistant. Covers US, PK, UK, DE, JP and other global markets.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Scikit-learn</span>
+                    <span class="tech-tag">Random Forest</span>
+                    <span class="tech-tag">REST APIs</span>
+                    <span class="tech-tag">Streamlit</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-card-top">
+                    <i class="fa-solid fa-eye"></i>
+                    <div class="project-links">
+                        <a href="https://github.com/muskanas78" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <h3>Air Draw — Computer Vision</h3>
+                <p>Gesture-based drawing application using real-time hand tracking at 30 FPS. Recognizes 10+ hand gestures via OpenCV and MediaPipe. Features an interactive virtual canvas with customizable brush colors and stroke styles.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">OpenCV</span>
+                    <span class="tech-tag">MediaPipe</span>
+                    <span class="tech-tag">Computer Vision</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-card-top">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <div class="project-links">
+                        <a href="https://github.com/muskanas78/Map" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <h3>Fast Explorer Map</h3>
+                <p>Interactive C++ route-finding tool mapping 70+ Pakistani cities. Computes shortest paths using Dijkstra's Algorithm (O(E log V)) with a min-heap for efficiency. Achieves 99.2% path accuracy with real-world geographical coordinates via CSV input.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">C++</span>
+                    <span class="tech-tag">Dijkstra's Algorithm</span>
+                    <span class="tech-tag">Graph Theory</span>
+                    <span class="tech-tag">Data Structures</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <span>© 2026 Muskan Ahmed</span>
+        <div class="footer-links">
+            <a href="mailto:muskanas786@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://linkedin.com/in/muskanas78" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/muskanas78" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

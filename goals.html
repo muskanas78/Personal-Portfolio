@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Goals — Muskan Ahmed</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .goals-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+        .goals-block {
+            padding: 36px;
+            background: var(--card);
+            border: 1px solid var(--border);
+        }
+        .goals-block .block-label {
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.25);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .goals-block .block-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+        .goal-item {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 20px;
+            align-items: flex-start;
+        }
+        .goal-item:last-child { margin-bottom: 0; }
+        .goal-icon {
+            width: 32px;
+            height: 32px;
+            border: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .goal-icon i {
+            font-size: 12px;
+            color: rgba(255,255,255,0.4);
+        }
+        .goal-text h4 {
+            font-size: 14px;
+            font-weight: 500;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        .goal-text p {
+            font-size: 12px;
+            color: var(--subtext);
+            line-height: 1.6;
+        }
+
+        .quote-block {
+            padding: 48px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            text-align: center;
+            position: relative;
+        }
+        .quote-block::before {
+            content: '"';
+            position: absolute;
+            top: 16px;
+            left: 32px;
+            font-size: 80px;
+            color: rgba(255,255,255,0.04);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        .quote-block blockquote {
+            font-size: 20px;
+            font-weight: 500;
+            color: rgba(255,255,255,0.75);
+            font-style: italic;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto 16px;
+        }
+        .quote-block cite {
+            font-size: 12px;
+            color: rgba(255,255,255,0.25);
+            font-style: normal;
+            letter-spacing: 0.08em;
+        }
+
+        @media (max-width: 768px) {
+            .goals-grid { grid-template-columns: 1fr; }
+            .quote-block { padding: 32px 24px; }
+            .quote-block blockquote { font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="contact-item">
+            <div class="icon-circle">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <span style="color: rgba(156,163,175);">muskanas786@gmail.com</span>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="goals.html">Goals</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="section">
+        <h2 style="margin-bottom: 48px;">
+            <span class="first-line">Where I'm headed —</span>
+            <span class="second-line">short term and beyond.</span>
+        </h2>
+
+        <div class="goals-grid">
+            <div class="goals-block">
+                <div class="block-label">Short-Term Goals</div>
+
+                <div class="goal-item">
+                    <div class="goal-icon"><i class="fa-solid fa-flask"></i></div>
+                    <div class="goal-text">
+                        <h4>Publish Research</h4>
+                        <p>Complete and publish my ongoing ML-based anomaly detection research for financial fraud detection under FAST's Head of FinTech.</p>
+                    </div>
+                </div>
+                <div class="goal-item">
+                    <div class="goal-icon"><i class="fa-solid fa-code"></i></div>
+                    <div class="goal-text">
+                        <h4>Master Full-Stack & DSA</h4>
+                        <p>Deepen expertise in system design, advanced data structures, and algorithms to build more robust and scalable software.</p>
+                    </div>
+                </div>
+                <div class="goal-item">
+                    <div class="goal-icon"><i class="fa-solid fa-robot"></i></div>
+                    <div class="goal-text">
+                        <h4>Advance Agentic AI Skills</h4>
+                        <p>Build and deploy more complex multi-agent AI systems using LangChain, CrewAI, and LLM orchestration frameworks.</p>
+                    </div>
+                </div>
+                <div class="goal-item">
+                    <div class="goal-icon"><i class="fa-solid fa-certificate"></i></div>
+                    <div class="goal-text">
+                        <h4>Certifications</h4>
+                        <p>Complete certifications in cloud computing (AWS) and quantitative finance to strengthen my technical and financial foundation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="goals-block">
+                <div class="block-label">Long-Term Goals</div>
+
+                <div class="goal-item">
+                    <div class="goal-icon"><i class="fa-solid fa-building"></i></div>
+                    <div class="goal-text">
+                        <h4>Work at an AI-Driven Product Company</h4>
+                        <p>Join a globally impactful company building AI systems at scale — contributing to products that meaningfully change how people work and live.</p>
+                    </div>
+                </div>
+                <div class="goal-item">
+                    <div class="goal-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <div class="goal-text">
+                        <h4>Bridge AI & Quantitative Finance</h4>
+                        <p>Build intelligent financial systems — applying ML and AI to trading strategies, risk modeling, and regulatory compliance in emerging markets.</p>
+                    </div>
+                </div>
+                <div class="goal-item">
+                    <div class="goal-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div class="goal-text">
+                        <h4>Pursue Graduate Studies</h4>
+                        <p>Apply for a Masters or PhD program in AI/ML or FinTech at a leading international institution to push research boundaries further.</p>
+                    </div>
+                </div>
+                <div class="goal-item">
+                    <div class="goal-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                    <div class="goal-text">
+                        <h4>Found Something Meaningful</h4>
+                        <p>Eventually build a venture or research lab focused on democratizing AI tools for underserved markets and communities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="quote-block">
+            <blockquote>Consistency builds excellence. Every system has its complexities — and I intend to investigate all of them.</blockquote>
+            <cite>— Muskan Ahmed</cite>
+        </div>
+    </section>
+
+    <footer>
+        <span>© 2026 Muskan Ahmed</span>
+        <div class="footer-links">
+            <a href="mailto:muskanas786@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://linkedin.com/in/muskanas78" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/muskanas78" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

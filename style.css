@@ -1,0 +1,420 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0b0b0c;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* =========================
+   VARIABLES
+========================= */
+:root {
+    --bg: #0b0b0c;
+    --card: rgba(255, 255, 255, 0.04);
+    --border: rgba(255,255,255,0.08);
+    --text: #ffffff;
+    --subtext: #9ca3af;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 80px;
+}
+
+nav h3 {
+    font-weight: 500;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--subtext);
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+nav {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero img {
+    width: 90px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: var(--subtext);
+}
+
+.hero h1 {
+    font-size: 48px;
+    max-width: 700px;
+    margin: 20px auto;
+    font-weight: 600;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* controls space between circle and text */
+}
+
+.icon-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon-circle i {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.line-1, .line-2, .line-3 {
+  display: block;
+  background: linear-gradient(90deg, #ffffff, #757575);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1.2;
+}
+
+/* =========================
+   BUTTON
+========================= */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 1px solid var(--border);
+    border-color: rgba(255,255,255,0.2);
+    background: var(--card);
+    margin-top: 20px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: rgb(206, 206, 206);
+    color: black;
+}
+
+/* =========================
+   LOGOS STRIP
+========================= */
+/* Outer container: clips overflow + adds fade edges */
+.logos-wrapper {
+  margin: 80px 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--card);
+
+  /* Fade out on left and right edges */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+
+/* The moving strip */
+.logos-track {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  padding: 32px 0;
+  width: max-content; /* lets it be as wide as all items combined */
+  animation: marquee 20s linear infinite;
+}
+
+/* Each logo+name pair */
+.logo-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0; /* never shrink — important for the scroll to work */
+  cursor: default;
+}
+
+.logo-item img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(1.2);
+  opacity: 0.5;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.logo-item span {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.35);
+  white-space: nowrap;
+  transition: color 0.3s ease;
+  letter-spacing: 0.02em;
+}
+
+/* Hover: bring logo to life */
+.logo-item:hover img {
+  filter: grayscale(0%) brightness(1);
+  opacity: 1;
+}
+
+.logo-item:hover span {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* The scroll animation */
+@keyframes marquee {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); } /* -50% because we duplicated items */
+}
+
+.logo-fast img   { height: 96px; }
+.logo-ats img    { height: 68px; }
+.logo-nescom img { height: 44px; }
+.logo-finova img { height: 36px; }
+.logo-pcn img    { height: 82px; filter: grayscale(100%) invert(1) brightness(0.6); opacity: 0.35; }
+
+/* =========================
+   CARDS (GLASS EFFECT)
+========================= */
+.section h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.first-line, .second-line {
+  display: block;
+  background: linear-gradient(90deg, #ffffff, #757575);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.section {
+  padding: 60px 96px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  padding: 30px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 320px;
+  justify-content: flex-end;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.card i {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.card h3 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  white-space: normal;
+}
+
+.card p {
+  color: var(--subtext);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* =========================
+   GALLERY
+========================= */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   FORM
+========================= */
+form {
+    max-width: 500px;
+    margin: auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: white;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: white;
+}
+
+/* =========================
+   PROGRESS BARS
+========================= */
+progress {
+    width: 100%;
+    height: 8px;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media (max-width: 1024px) {
+    nav {
+        padding: 20px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section {
+        padding: 60px 30px;
+    }
+}
+
+@media (max-width: 640px) {
+    nav ul {
+        display: none;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 24px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer span {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.25);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}

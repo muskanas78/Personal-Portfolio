@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Skills — Muskan Ahmed</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .skills-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+        .skills-block {
+            padding: 36px;
+            background: var(--card);
+            border: 1px solid var(--border);
+        }
+        .block-label {
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.25);
+            margin-bottom: 28px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .block-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+        .skill-row {
+            margin-bottom: 20px;
+        }
+        .skill-row:last-child { margin-bottom: 0; }
+        .skill-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .skill-meta span {
+            font-size: 13px;
+            color: rgba(255,255,255,0.7);
+        }
+        .skill-meta .skill-pct {
+            font-size: 11px;
+            color: rgba(255,255,255,0.25);
+        }
+        .skill-bar-bg {
+            width: 100%;
+            height: 3px;
+            background: rgba(255,255,255,0.07);
+            position: relative;
+            overflow: hidden;
+        }
+        .skill-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, rgba(255,255,255,0.6), rgba(255,255,255,0.2));
+            transition: width 1s ease;
+        }
+
+        .interests-block {
+            padding: 36px;
+            background: var(--card);
+            border: 1px solid var(--border);
+        }
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+        .interest-item {
+            padding: 20px 16px;
+            border: 1px solid var(--border);
+            text-align: center;
+            transition: 0.3s;
+        }
+        .interest-item:hover {
+            border-color: rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.03);
+        }
+        .interest-item i {
+            font-size: 18px;
+            color: rgba(255,255,255,0.3);
+            margin-bottom: 10px;
+            display: block;
+        }
+        .interest-item span {
+            font-size: 12px;
+            color: var(--subtext);
+        }
+
+        @media (max-width: 768px) {
+            .skills-layout { grid-template-columns: 1fr; }
+            .interests-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 480px) {
+            .interests-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="contact-item">
+            <div class="icon-circle">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <span style="color: rgba(156,163,175);">muskanas786@gmail.com</span>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="goals.html">Goals</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="section">
+        <h2 style="margin-bottom: 48px;">
+            <span class="first-line">What I bring to the table —</span>
+            <span class="second-line">skills, tools, and passions.</span>
+        </h2>
+
+        <div class="skills-layout">
+            <div class="skills-block">
+                <div class="block-label">Languages & Frameworks</div>
+                <div class="skill-row">
+                    <div class="skill-meta"><span>Python</span><span class="skill-pct">90%</span></div>
+                    <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%"></div></div>
+                </div>
+                <div class="skill-row">
+                    <div class="skill-meta"><span>JavaScript / TypeScript</span><span class="skill-pct">80%</span></div>
+                    <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 80%"></div></div>
+                </div>
+                <div class="skill-row">
+                    <div class="skill-meta"><span>React.js</span><span class="skill-pct">80%</span></div>
+                    <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 80%"></div></div>
+                </div>
+                <div class="skill-row">
+                    <div class="skill-meta"><span>HTML & CSS</span><span class="skill-pct">90%</span></div>
+                    <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%"></div></div>
+                </div>
+                <div class="skill-row">
+                    <div class="skill-meta"><span>Java / Spring Boot</span><span class="skill-pct">75%</span></div>
+                    <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 75%"></div></div>
+                </div>
+                <div class="skill-row">
+                    <div class="skill-meta"><span>C++</span><span class="skill-pct">78%</span></div>
+                    <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 78%"></div></div>
+                </div>
+            </div>
+
+            <div class="skills-block">
+                <div class="block-label">AI, ML & Data Science</div>
+                <div class="skill-row">
+                    <div class="skill-meta"><span>Generative AI & Agentic AI</span><span class="skill-pct">88%</span></div>
+                    <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 88%"></div></div>
+                </div>
+                <div class="skill-row">
+                    <div class="skill-meta"><span>Computer Vision (OpenCV, MediaPipe)</span><span class="skill-pct">82%</span></div>
+                    <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 82%"></div></div>
+                </div>
+                <div class="skill-row">
+                    <div class="skill-meta"><span>LangChain / CrewAI</span><span class="skill-pct">85%</span></div>
+                    <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%"></div></div>
+                </div>
+                <div class="skill-row">
+                    <div class="skill-meta"><span>Scikit-learn / TensorFlow</span><span class="skill-pct">75%</span></div>
+                    <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 75%"></div></div>
+                </div>
+                <div class="skill-row">
+                    <div class="skill-meta"><span>Quantitative Finance</span><span class="skill-pct">72%</span></div>
+                    <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 72%"></div></div>
+                </div>
+                <div class="skill-row">
+                    <div class="skill-meta"><span>Software QA & Testing</span><span class="skill-pct">85%</span></div>
+                    <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%"></div></div>
+                </div>
+            </div>
+
+            <div class="skills-block">
+                <div class="block-label">Tools & DevOps</div>
+                <div class="skill-row">
+                    <div class="skill-meta"><span>Git & GitHub</span><span class="skill-pct">88%</span></div>
+                    <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 88%"></div></div>
+                </div>
+                <div class="skill-row">
+                    <div class="skill-meta"><span>AWS EC2 / CI/CD</span><span class="skill-pct">70%</span></div>
+                    <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 70%"></div></div>
+                </div>
+                <div class="skill-row">
+                    <div class="skill-meta"><span>MongoDB / MySQL</span><span class="skill-pct">80%</span></div>
+                    <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 80%"></div></div>
+                </div>
+                <div class="skill-row">
+                    <div class="skill-meta"><span>Figma / UI/UX Design</span><span class="skill-pct">82%</span></div>
+                    <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 82%"></div></div>
+                </div>
+            </div>
+
+            <div class="skills-block">
+                <div class="block-label">Soft Skills</div>
+                <div class="skill-row">
+                    <div class="skill-meta"><span>Research & Technical Writing</span><span class="skill-pct">85%</span></div>
+                    <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%"></div></div>
+                </div>
+                <div class="skill-row">
+                    <div class="skill-meta"><span>Cross-Functional Collaboration</span><span class="skill-pct">90%</span></div>
+                    <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%"></div></div>
+                </div>
+                <div class="skill-row">
+                    <div class="skill-meta"><span>Leadership & Event Management</span><span class="skill-pct">88%</span></div>
+                    <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 88%"></div></div>
+                </div>
+                <div class="skill-row">
+                    <div class="skill-meta"><span>Problem Solving</span><span class="skill-pct">92%</span></div>
+                    <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 92%"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="interests-block">
+            <div class="block-label">Interests & Hobbies</div>
+            <div class="interests-grid">
+                <div class="interest-item">
+                    <i class="fa-solid fa-paintbrush"></i>
+                    <span>Fine Arts & Painting</span>
+                </div>
+                <div class="interest-item">
+                    <i class="fa-solid fa-book-open"></i>
+                    <span>Reading</span>
+                </div>
+                <div class="interest-item">
+                    <i class="fa-solid fa-mountain"></i>
+                    <span>Mountains & Travel</span>
+                </div>
+                <div class="interest-item">
+                    <i class="fa-solid fa-chess"></i>
+                    <span>Chess</span>
+                </div>
+                <div class="interest-item">
+                    <i class="fa-solid fa-film"></i>
+                    <span>Documentaries</span>
+                </div>
+                <div class="interest-item">
+                    <i class="fa-solid fa-pen"></i>
+                    <span>Journaling</span>
+                </div>
+                <div class="interest-item">
+                    <i class="fa-solid fa-gamepad"></i>
+                    <span>Offline Games</span>
+                </div>
+                <div class="interest-item">
+                    <i class="fa-solid fa-comments"></i>
+                    <span>Languages</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <span>© 2026 Muskan Ahmed</span>
+        <div class="footer-links">
+            <a href="mailto:muskanas786@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://linkedin.com/in/muskanas78" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/muskanas78" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

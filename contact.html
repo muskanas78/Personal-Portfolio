@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact — Muskan Ahmed</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.6fr;
+            gap: 24px;
+            align-items: start;
+        }
+        .contact-info {
+            padding: 36px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+        .block-label {
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.25);
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .block-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .contact-detail .icon-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .contact-detail .icon-circle i {
+            font-size: 14px;
+            color: rgba(255,255,255,0.45);
+        }
+        .contact-detail-text h4 {
+            font-size: 11px;
+            font-weight: 500;
+            color: rgba(255,255,255,0.3);
+            margin-bottom: 3px;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+        .contact-detail-text a,
+        .contact-detail-text span {
+            font-size: 13px;
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .contact-detail-text a:hover { color: #fff; }
+
+        .contact-form-block {
+            padding: 36px;
+            background: var(--card);
+            border: 1px solid var(--border);
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .form-field label {
+            font-size: 11px;
+            color: rgba(255,255,255,0.3);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+        .form-field input,
+        .form-field textarea {
+            width: 100%;
+            padding: 12px 14px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            color: #fff;
+            font-size: 13px;
+            font-family: inherit;
+            transition: border-color 0.2s;
+            resize: none;
+        }
+        .form-field input:focus,
+        .form-field textarea:focus {
+            outline: none;
+            border-color: rgba(255,255,255,0.25);
+        }
+        .form-field input::placeholder,
+        .form-field textarea::placeholder {
+            color: rgba(255,255,255,0.2);
+        }
+        .form-full {
+            grid-column: span 2;
+        }
+        .form-submit {
+            margin-top: 16px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .btn-send {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 28px;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: var(--card);
+            color: white;
+            font-size: 13px;
+            font-family: inherit;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn-send:hover {
+            background: rgba(255,255,255,0.9);
+            color: #000;
+        }
+
+        @media (max-width: 768px) {
+            .contact-layout { grid-template-columns: 1fr; }
+            .form-grid { grid-template-columns: 1fr; }
+            .form-full { grid-column: span 1; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="contact-item">
+            <div class="icon-circle">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <span style="color: rgba(156,163,175);">muskanas786@gmail.com</span>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="goals.html">Goals</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="section">
+        <h2 style="margin-bottom: 48px;">
+            <span class="first-line">Let's build something —</span>
+            <span class="second-line">get in touch.</span>
+        </h2>
+
+        <div class="contact-layout">
+            <div class="contact-info">
+                <div class="block-label">Contact Info</div>
+
+                <div class="contact-detail">
+                    <div class="icon-circle">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="contact-detail-text">
+                        <h4>Email</h4>
+                        <a href="mailto:muskanas786@gmail.com">muskanas786@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <div class="icon-circle">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="contact-detail-text">
+                        <h4>Phone</h4>
+                        <span>+92-332-5045644</span>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <div class="icon-circle">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="contact-detail-text">
+                        <h4>Location</h4>
+                        <span>Islamabad, Pakistan</span>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <div class="icon-circle">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </div>
+                    <div class="contact-detail-text">
+                        <h4>LinkedIn</h4>
+                        <a href="https://linkedin.com/in/muskanas78" target="_blank">linkedin.com/in/muskanas78</a>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <div class="icon-circle">
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+                    <div class="contact-detail-text">
+                        <h4>GitHub</h4>
+                        <a href="https://github.com/muskanas78" target="_blank">github.com/muskanas78</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-block">
+                <div class="block-label" style="margin-bottom: 24px;">Send a Message</div>
+                <form onsubmit="return false;">
+                    <div class="form-grid">
+                        <div class="form-field">
+                            <label>Name</label>
+                            <input type="text" placeholder="Your name">
+                        </div>
+                        <div class="form-field">
+                            <label>Email</label>
+                            <input type="email" placeholder="your@email.com">
+                        </div>
+                        <div class="form-field form-full">
+                            <label>Subject</label>
+                            <input type="text" placeholder="What's this about?">
+                        </div>
+                        <div class="form-field form-full">
+                            <label>Message</label>
+                            <textarea rows="6" placeholder="Write your message here..."></textarea>
+                        </div>
+                    </div>
+                    <div class="form-submit">
+                        <button class="btn-send" type="submit">
+                            Send Message <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <span>© 2026 Muskan Ahmed</span>
+        <div class="footer-links">
+            <a href="mailto:muskanas786@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://linkedin.com/in/muskanas78" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/muskanas78" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

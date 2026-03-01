@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gallery — Muskan Ahmed</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 1 / 1;
+            background: var(--card);
+            border: 1px solid var(--border);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            filter: grayscale(20%);
+            transition: transform 0.5s ease, filter 0.4s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.06);
+            filter: grayscale(0%);
+        }
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 16px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.75));
+            font-size: 12px;
+            color: rgba(255,255,255,0.8);
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+        .gallery-item.tall {
+            grid-row: span 2;
+            aspect-ratio: unset;
+        }
+        .gallery-item.wide {
+            grid-column: span 2;
+            aspect-ratio: unset;
+            height: 260px;
+        }
+        @media (max-width: 768px) {
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .gallery-item.wide { grid-column: span 1; height: auto; aspect-ratio: 1/1; }
+            .gallery-item.tall { grid-row: span 1; aspect-ratio: 1/1; }
+        }
+        @media (max-width: 480px) {
+            .gallery-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="contact-item">
+            <div class="icon-circle">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <span style="color: rgba(156,163,175);">muskanas786@gmail.com</span>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="goals.html">Goals</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="section">
+        <h2 style="margin-bottom: 12px;">
+            <span class="first-line">A glimpse into my world —</span>
+            <span class="second-line">projects, events, and life.</span>
+        </h2>
+        <p style="color: var(--subtext); font-size: 13px; text-align: center; margin-bottom: 48px;">Hover over any image to see more.</p>
+
+        <div class="gallery-grid">
+            <div class="gallery-item wide">
+                <img src="images/a.png" alt="Project work">
+                <div class="gallery-caption">Designed and developed NAaaS at PCN Lab — Pakistan's first AI-powered news analytics platform</div>
+            </div>
+            <div class="gallery-item tall">
+                <img src="images/b.jpeg" alt="Muskan">
+                <div class="gallery-caption">Hi, that's me attending Indus AI Week conference. 👋</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/c.webp" alt="FAST NUCES">
+                <div class="gallery-caption">BS FinTech at FAST-NUCES Islamabad Campus</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/d.jpeg" alt="NaSCon event">
+                <div class="gallery-caption">NaSCon'24 — Organized Room 8: Murder Mystery, The Devil's Lair</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/e.jfif" alt="Volunteering">
+                <div class="gallery-caption">Volunteered at Angel's Garden — a school for children with neurological disabilities (i.e. Autism)</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/f.jpeg" alt="85th Convocation">
+                <div class="gallery-caption">Usher at FAST's 85th Convocation — 850+ graduates, 7000+ attendees</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/g.jpeg" alt="AI Work">
+                <div class="gallery-caption">Ascend — Enterprise Data Engineering Framework</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/h.jpeg" alt="Team">
+                <div class="gallery-caption">With the ATS team at NSTP, Islamabad</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/i.jpeg" alt="Art">
+                <div class="gallery-caption">Pixelated Vision — Instagram: @_akaiken_</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <span>© 2026 Muskan Ahmed</span>
+        <div class="footer-links">
+            <a href="mailto:muskanas786@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://linkedin.com/in/muskanas78" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/muskanas78" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
